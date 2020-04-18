@@ -1,19 +1,66 @@
+// general Hello get
 GET http://localhost:3000/
 
 ###
 
+// read all products
 GET http://localhost:3000/products
 
 ###
 
+// read product with id 4000810155460
 GET http://localhost:3000/product/4000810155460
 
 ###
 
+// try to get wrong id
 GET http://localhost:3000/product/400081015546
 
 ###
 
+// delete product with id 4000810155460
 DELETE http://localhost:3000/product/4000810155460
+
+###
+
+// update product
+POST http://localhost:3000/product
+Content-Type: application/json
+
+{ "category": 2296,
+  "id": "4000810155460",
+  "image": "/img/4000810155460.png",
+  "name": "Marinad- & såskanna Landmann",
+  "salePrice": 199.90,
+  "description": "Praktisk marinad-och såskanna tillverkad av rostfritt stål med en marinadborste av silikon. Med lock för att undvika att insekter och liknande kommer ner i såsen eller marinaden.",
+  "measure": "st"}
+
+###
+
+// update sale price in product
+PUT http://localhost:3000/product
+Content-Type: application/json
+
+{ "category": 2296,
+  "id": "4000810155460",
+  "image": "/img/4000810155460.png",
+  "name": "Marinad- & såskanna Landmann",
+  "salePrice": 77.90,
+  "description": "Praktisk marinad-och såskanna tillverkad av rostfritt stål med en marinadborste av silikon. Med lock för att undvika att insekter och liknande kommer ner i såsen eller marinaden.",
+  "measure": "st"}
+
+###
+
+// update with wrong id
+PUT http://localhost:3000/product
+Content-Type: application/json
+
+{ "category": 2296,
+  "id": "1",
+  "image": "/img/4000810155460.png",
+  "name": "Marinad- & såskanna Landmann",
+  "salePrice": 77.90,
+  "description": "Praktisk marinad-och såskanna tillverkad av rostfritt stål med en marinadborste av silikon. Med lock för att undvika att insekter och liknande kommer ner i såsen eller marinaden.",
+  "measure": "st"}
 
 ###
