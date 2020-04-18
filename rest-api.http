@@ -6,3 +6,14 @@ GET http://localhost:3000/products
 
 ###
 
+GET http://localhost:3000/product/4000810155460
+
+###
+
+GET http://localhost:3000/product/400081015546
+
+###
+
+DELETE http://localhost:3000/product/4000810155460
+
+###
